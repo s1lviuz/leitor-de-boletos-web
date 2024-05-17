@@ -12,14 +12,14 @@ export default function Home() {
           width={200}
           height={200}
         />
-        <h1 className="text-xl xl:text-4xl font-bold">Bem-vindo ao Leitor de Boletos 🎉</h1>
-        <p className="xl:text-lg mt-2 text-center">🔍 A solução definitiva para leitura de boletos bancários.</p>
+        <h1 className="text-xl 2xl:text-4xl xl:text-2xl font-bold">Bem-vindo ao Leitor de Boletos 🎉</h1>
+        <p className="2xl:text-lg mt-2 text-center">🔍 A solução definitiva para leitura de boletos bancários.</p>
       </header>
-      <section className="max-w-3xl">
+      <section className="max-w-xl mb-auto mt-5 xl:mt-10">
         <DropzoneComponent />
       </section>
       <footer className="flex flex-col w-full items-center justify-center min-h-20">
-        <p className="text-lg">Desenvolvido por:</p>
+        <p className="2xl:text-lg">Desenvolvido por:</p>
         <div className="flex gap-1 items-center">
           <GithubIcon size={24} />
           <a
