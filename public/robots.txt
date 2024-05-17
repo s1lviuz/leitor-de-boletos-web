@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://leitordeboletos.vercel.app
+
+# Sitemaps
+Sitemap: https://leitordeboletos.vercel.app/sitemap.xml
