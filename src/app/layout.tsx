@@ -10,7 +10,9 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "Leitor de Boletos",
-  description: "🔍 A solução definitiva para leitura de boletos bancários.",
+  description: "🔍 A solução definitiva para leitura de boletos bancários. Leitor de Boletos extrai facilmente a linha digitável de qualquer boleto a partir de arquivos PDF ou imagens.",
+  robots: "noindex, nofollow",
+  
 };
 
 export default function RootLayout({

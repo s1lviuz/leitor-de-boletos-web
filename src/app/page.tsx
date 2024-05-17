@@ -8,7 +8,7 @@ export default function Home() {
       <header className="flex flex-col w-full items-center justify-center">
         <Image
           src="/ghost_icon.png"
-          alt="Logo"
+          alt="Logo do Leitor de Boletos"
           width={200}
           height={200}
         />
