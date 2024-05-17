@@ -3,12 +3,19 @@
 import { useMemo, useState } from "react";
 import { useDropzone } from "react-dropzone";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+
 const baseStyle = {
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  padding: '20vh',
   borderColor: '#ccc',
   borderStyle: 'solid',
   outline: 'none',
@@ -92,25 +99,6 @@ export default function DropzoneComponent() {
 
   return (
     <div className="w-full h-full flex items-center justify-center flex-col">
-      <section>
-        <div className="p-4 rounded-lg mb-6">
-          <h3 className="text-xl font-semibold mb-2">Como usar:</h3>
-          <ol className="list-decimal list-inside space-y-2">
-            <li>
-              <strong>Passo 1:</strong> Prepare seu boleto
-              <p className="ml-4">📸 Tire uma foto clara do boleto ou tenha o arquivo PDF pronto. Certifique-se de que a imagem esteja nítida e sem cortes.</p>
-            </li>
-            <li>
-              <strong>Passo 2:</strong> Faça o upload do arquivo
-              <p className="ml-4">🖱️ Clique na área abaixo ou arraste o arquivo do boleto para a área destacada. Vamos processar o arquivo rapidamente para você!</p>
-            </li>
-            <li>
-              <strong>Passo 3:</strong> Obtenha a linha digitável
-              <p className="ml-4">✨ Assim que o processamento for concluído, a linha digitável do boleto será exibida. Use a linha digitável para realizar o pagamento de forma fácil e rápida.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
       <section className="container">
         <div {...getRootProps({ style, className: "bg-[#57C5FB]/15 rounded-xl shadow-lg" })}>
           <input {...getInputProps()} />
@@ -131,11 +119,34 @@ export default function DropzoneComponent() {
                   setCopiado(false);
                 }, 2000);
               });
-          }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">
             {copiado ? 'Copiado ✅' : 'Copiar'}
           </button>
         </div> : null}
       </div>
+      <section>
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Como usar?</AccordionTrigger>
+            <AccordionContent>
+              <ol className="list-decimal list-inside space-y-3">
+                <li>
+                  <strong>Passo 1:</strong> Prepare seu boleto
+                  <p className="ml-4 text-justify xl:text-left">📸 Tire uma foto clara do boleto ou tenha o arquivo PDF pronto. Certifique-se de que a imagem esteja nítida e sem cortes.</p>
+                </li>
+                <li>
+                  <strong>Passo 2:</strong> Faça o upload do arquivo
+                  <p className="ml-4 text-justify xl:text-left">🖱️ Clique na área abaixo ou arraste o arquivo do boleto para a área destacada. Vamos processar o arquivo rapidamente para você!</p>
+                </li>
+                <li>
+                  <strong>Passo 3:</strong> Obtenha a linha digitável
+                  <p className="ml-4 text-justify xl:text-left">✨ Assim que o processamento for concluído, a linha digitável do boleto será exibida. Use a linha digitável para realizar o pagamento de forma fácil e rápida.</p>
+                </li>
+              </ol>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </section>
     </div>
   );
 }

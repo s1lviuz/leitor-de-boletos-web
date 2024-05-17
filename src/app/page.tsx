@@ -4,7 +4,7 @@ import { GithubIcon } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full h-full items-center justify-between bg-[#012A45] text-white">
+    <main className="flex flex-col min-h-screen w-full items-center justify-between bg-[#012A45] text-white">
       <header className="flex flex-col w-full items-center justify-center">
         <Image
           src="/ghost_icon.png"
@@ -12,10 +12,10 @@ export default function Home() {
           width={200}
           height={200}
         />
-        <h1 className="text-4xl font-bold">Bem-vindo ao Leitor de Boletos 🎉</h1>
-        <p className="text-lg mt-2">🔍 A solução definitiva para leitura de boletos bancários.</p>
+        <h1 className="text-xl xl:text-4xl font-bold">Bem-vindo ao Leitor de Boletos 🎉</h1>
+        <p className="xl:text-lg mt-2 text-center">🔍 A solução definitiva para leitura de boletos bancários.</p>
       </header>
-      <section>
+      <section className="max-w-3xl">
         <DropzoneComponent />
       </section>
       <footer className="flex flex-col w-full items-center justify-center min-h-20">
