@@ -70,7 +70,9 @@ export default function DropzoneComponent() {
 
         const data = await response.json();
 
-        setRetorno(data.linha);
+        const onlyNumbers = data.linha.replace(/\D/g, '');
+
+        setRetorno(onlyNumbers);
 
         setLoading(false);
       };
@@ -119,7 +121,8 @@ export default function DropzoneComponent() {
       </section>
       <div className="mt-4">
         {loading ? 'Carregando...' : retorno ? <div className="flex items-center gap-2">
-          {retorno}
+          <p className="text-lg font-semibold">Linha digitável:</p>
+          {retorno.replace(/d/g, '')}
           <button onClick={() => {
             navigator.clipboard.writeText(retorno)
               .then(() => {

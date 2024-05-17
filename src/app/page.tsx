@@ -1,5 +1,6 @@
 import Image from "next/image";
 import DropzoneComponent from "./components/Dropzone";
+import { GithubIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -19,12 +20,16 @@ export default function Home() {
       </section>
       <footer className="flex flex-col w-full items-center justify-center min-h-20">
         <p className="text-lg">Desenvolvido por:</p>
-        <a
-          href="#"
-          className="text-blue-500 hover:underline"
-        >
-          <strong>Silvio</strong>
-        </a>
+        <div className="flex gap-1 items-center">
+          <GithubIcon size={24} />
+          <a
+            href="https://github.com/s1lviuz"
+            target="_blank"
+            className="text-blue-500 hover:underline"
+          >
+            <strong>@s1lviuz</strong>
+          </a>
+        </div>
       </footer>
     </main>
   );
