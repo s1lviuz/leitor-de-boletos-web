@@ -12,7 +12,9 @@ export const metadata: Metadata = {
   title: "Leitor de Boletos",
   description: "🔍 A solução definitiva para leitura de boletos bancários. Leitor de Boletos extrai facilmente a linha digitável de qualquer boleto a partir de arquivos PDF ou imagens.",
   robots: "noindex, nofollow",
-  
+  other: {
+    "google-site-verification": "wgEovlavFLiAxb7NFmL1zQtR50Lxfe4_7kWVJfX77qA"
+  }
 };
 
 export default function RootLayout({
