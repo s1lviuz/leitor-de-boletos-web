@@ -1,36 +1,23 @@
-import Image from "next/image";
-import DropzoneComponent from "./components/Dropzone";
-import { GithubIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen w-full items-center justify-between bg-[#012A45] text-white">
-      <header className="flex flex-col w-full items-center justify-center">
-        <Image
-          src="/ghost_icon.png"
-          alt="Logo do Leitor de Boletos"
-          width={200}
-          height={200}
-        />
-        <h1 className="text-xl 2xl:text-4xl xl:text-2xl font-bold">Bem-vindo ao Leitor de Boletos 🎉</h1>
-        <p className="2xl:text-lg mt-2 text-center">🔍 A solução definitiva para leitura de boletos bancários.</p>
-      </header>
-      <section className="max-w-xl mb-auto mt-5 xl:mt-10">
-        <DropzoneComponent />
-      </section>
-      <footer className="flex flex-col w-full items-center justify-center min-h-20">
-        <p className="2xl:text-lg">Desenvolvido por:</p>
-        <div className="flex gap-1 items-center">
-          <GithubIcon size={24} />
-          <a
-            href="https://github.com/s1lviuz"
-            target="_blank"
-            className="text-blue-500 hover:underline"
-          >
-            <strong>@s1lviuz</strong>
-          </a>
+    <div className="px-5 text-justify">
+      <p className="mb-6">
+        📄 Extraia facilmente a linha digitável de qualquer boleto a partir de arquivos PDF ou imagens.
+      </p>
+      <p className="mb-6">
+        📋 Nossa aplicação é projetada para simplificar sua vida financeira. Com apenas alguns cliques, você pode obter a linha digitável de qualquer boleto e realizar seus pagamentos de forma rápida e eficiente.
+      </p>
+      <p className="mb-6">
+        ✅ Não dependa mais dos aplicativos bancários. Experimente nossa solução confiável e segura para gerenciar seus boletos com facilidade.
+      </p>
+      <Link href="/leitor-boleto">
+        <div className="mt-6 px-4 py-2 w-fit mx-auto bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
+          Começar 🚀
         </div>
-      </footer>
-    </main>
+      </Link>
+    </div>
   );
 }
