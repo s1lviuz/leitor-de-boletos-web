@@ -20,8 +20,6 @@ const baseStyle = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  borderColor: '#ccc',
-  borderStyle: 'solid',
   outline: 'none',
   transition: 'border .24s ease-in-out',
   cursor: 'pointer'
@@ -106,7 +104,7 @@ export default function DropzoneComponent() {
   return (
     <div className="w-full h-full flex items-center justify-center flex-col">
       <section className="container">
-        <div {...getRootProps({ style, className: "bg-[#57C5FB]/15 hover:bg-[#57C5FB]/20 hover:scale-105 rounded-xl shadow-lg" })}>
+        <div {...getRootProps({ style, className: "bg-[#57C5FB]/15 hover:bg-[#57C5FB]/20 hover:scale-105 rounded-xl shadow-lg border-dashed border-2 border-gray-400" })}>
           <input {...getInputProps()} />
           <p className="p-10">
             Arraste e solte o arquivo PDF do boleto aqui, ou clique para selecionar o arquivo
@@ -114,7 +112,7 @@ export default function DropzoneComponent() {
         </div>
       </section>
       <div className="my-5 w-full">
-        {loading ? <div className="flex items-center gap-2 w-full">
+        {loading ? <div className="flex items-center gap-2 w-full ">
           <Alert className="bg-transparent w-full text-white mx-5">
             <Terminal className="h-4 w-4" color="white" />
             <AlertTitle className="animate-pulse">Processando...</AlertTitle>
